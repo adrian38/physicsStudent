@@ -21,7 +21,7 @@ export function playerFactory(): any {
 }
 
 @NgModule({
-  declarations: [AppComponent,MenulateralComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -37,10 +37,10 @@ export function playerFactory(): any {
     ApiService,
   ],
   exports:[
-    MenulateralComponent
+
 
   ],
-  
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
