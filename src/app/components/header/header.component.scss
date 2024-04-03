@@ -1,7 +1,7 @@
 .header {
   height: 100%;
-  background: linear-gradient(90deg, #63b5f6, #1976d2);
-  
+  background: var(--ion-color-primary);
+
 
   // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
@@ -12,7 +12,7 @@
     font-weight: 500;
     font-size: 120%;
   }
-  .avatar { 
+  .avatar {
     align-items: end;
     margin-left: 20%;
     margin-bottom: 50%;

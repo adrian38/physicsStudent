@@ -25,10 +25,10 @@ export class AppComponent implements OnInit {
 
   async changeStatusBar() {
     // Verifica si la plataforma es móvil y está lista para manipular la barra de estado
-    if (this.platform.is('hybrid')) {
+    if (this.platform.is('capacitor')) {
       try {
-        await StatusBar.setStyle({ style: Style.Dark });
-        await StatusBar.setBackgroundColor({ color: '#yourHexColor' });
+        await StatusBar.setStyle({ style: Style.Light });
+        await StatusBar.setBackgroundColor({ color: '63b5f6' });
       } catch (err) {
         console.log('Error setting status bar style and color', err);
       }
