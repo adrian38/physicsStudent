@@ -1,0 +1,33 @@
+<ion-menu contentId="main-content"   type="overlay"  side="start" >
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header> 
+  <ion-content >
+    <ion-list class="hola1">
+      <ion-menu-toggle auto-hide = "true">
+
+        <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Contenido</ion-item>
+        <ion-item (click)="navigateToPage('/simulaciones/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Simulaciones</ion-item>
+        <ion-item (click)="navigateToPage('/tutoriales/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Tutoriales</ion-item>
+        <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Evaluación</ion-item>
+        <!-- <ion-item routerLink="/contenido"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon> Contenido</ion-item> -->
+        <ion-item (click)="navigateToPage('/progreso')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Progreaso</ion-item>
+       <!--  <ion-item routerLink="/electrostática">Electrostática</ion-item>
+ -->
+      </ion-menu-toggle>
+      
+    </ion-list>
+    
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    
+  </ion-header>
+  
+</div>
+
+

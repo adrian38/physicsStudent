@@ -3,7 +3,7 @@
     <ion-col size="3" style="padding-top: 3.5%">
       <ion-icon
         *ngIf="back"
-        name="arrow-back"
+        name="menu"
         style="
           width: 70%;
           height: 70%;
@@ -11,7 +11,7 @@
 
           color: rgb(49, 49, 57);
         "
-        (click)="backEvent()"
+        (click)="onToggleMenu()"
       ></ion-icon>
     </ion-col>
     <ion-col size="6" style="padding-top: 4%"

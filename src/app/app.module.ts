@@ -14,13 +14,14 @@ import { QuizService } from './services/quiz.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './services/backend.service';
+import { MenulateralComponent } from './components/menulateral/menulateral.component';
 
 export function playerFactory(): any {
   return import('lottie-web');
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,MenulateralComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -35,6 +36,11 @@ export function playerFactory(): any {
     QuizService,
     ApiService,
   ],
+  exports:[
+    MenulateralComponent
+
+  ],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}

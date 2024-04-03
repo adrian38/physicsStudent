@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, Platform } from '@ionic/angular';
+import { MenuController, NavController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-contenido',
@@ -9,7 +9,9 @@ import { NavController, Platform } from '@ionic/angular';
 export class ContenidoPage implements OnInit {
   options: string[] = ['Electrostática', 'Corriente', 'Magnetismo'];
 
-  constructor(public navCtrl: NavController, private platform: Platform) {}
+  constructor(public navCtrl: NavController, 
+              private platform: Platform,
+              ) {}
 
   ngOnInit() {
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -19,6 +21,10 @@ export class ContenidoPage implements OnInit {
       });
     });
   }
+
+  
+
+
   routeTopage(element: number) {
     if (element === 2) {
     } else {

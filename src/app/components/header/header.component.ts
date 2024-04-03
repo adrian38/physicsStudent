@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { AlertController, MenuController, NavController } from '@ionic/angular';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
@@ -13,12 +13,16 @@ export class HeaderComponent implements OnInit {
   @Input() headerText: string = '';
   @Input() back: boolean = false;
 
+  @Output() toggleMenu = new EventEmitter();
+
   constructor(
     private _location: Location,
     private navCon: NavController,
     private route: ActivatedRoute,
     public alertController: AlertController,
-    private _serv: QuizService
+    private _serv: QuizService,
+    private menuCtrl: MenuController
+    
   ) {}
 
   ngOnInit() {
@@ -33,6 +37,18 @@ export class HeaderComponent implements OnInit {
     //   console.log();
     // }
   }
+
+
+  onToggleMenu() {
+    console.log("click");
+    this.menuCtrl.toggle();
+  }
+
+ /*  menuEvent(){
+    this.menuCtrl.toggle();
+    
+    console.log("click")
+  } */
 
   backEvent() {
     console.log('************* path *************');
