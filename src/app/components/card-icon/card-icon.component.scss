@@ -21,16 +21,21 @@ ion-card {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 10px !important;
     margin: 10px 0;
-    ion-thumbnail {
-        width: 8vh;
-        height: 8vh;
-        border-radius: 20px;
+
+    ion-card-header {
+        padding-bottom: 1%;
+        // ion-thumbnail {
+        //     width: 8vh;
+        //     height: 8vh;
+        //     border-radius: 20px;
         img {
-            width: 4vh;
-            height: 4vh;
-            transform: translateY(50%);
+            width: 15vh;
+            height: 15vh;
+            // transform: translateY(50%);
+            // }
         }
     }
+
     ion-card-content {
         text-align: center;
         ion-label {
