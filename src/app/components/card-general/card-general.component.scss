@@ -17,74 +17,21 @@ $font-comicneue-md: 'ComicNeue-Md';
 $font-comicneue-bd: 'ComicNeue-Bd';
 $font-comicneue-roman: 'ComicNeue-light';
 
-// .image-left {
-//     // width: 25vh;
-//     // max-width: 100px;
-//     // height: 25vh;
-//     // max-height: 100px;
-//     // padding: 5%;
-
-//     img {
-//         flex-shrink: 0;
-//         min-width: 100%;
-//         min-height: 90%;
-//         max-height: 90%;
-//         border-radius: 2px;
-//     }
-// }
-
-// .image-strech {
-//     width: 25vh;
-//     max-width: 100px;
-//     height: 25vh;
-//     max-height: 100px;
-//     padding: 5%;
-
-//     img {
-//         flex-shrink: 0;
-//         max-width: 98%;
-//         min-height: 90%;
-//         max-height: 90%;
-//         border-radius: 2px;
-//     }
-// }
-
 .card-title {
     text-align: center;
-    margin: 10%;
-    font-weight: 500;
-    color: black;
+    margin: 3%;
+    font-weight: 400;
+
     font-size: large;
-    font-family: 'ComicNeue-Bd';
+    font-family: 'ComicNeue-Md';
 }
 
-// .text-helvetica-medium {
-//     font-family: 'ComicNeue-Md' !important;
-//     font-size: 21px;
-// }
+ion-card {
+    img: {
+        max-height: 20px !important;
+    }
+    // border: 1px solid #63b5f6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-// ion-card {
-//     // border: 1px solid #63b5f6;
-//     box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
-// }
-
-// .card {
-//     max-width: 100%;
-//     border: 1px solid #ddd;
-//     border-radius: 8px;
-//     overflow: hidden;
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-// }
-
-// .card img {
-//     width: 50%;
-//     height: auto;
-//     display: block;
-// }
-
-// .card .title {
-//     text-align: center;
-//     padding: 16px;
-//     font-size: 24px;
-//     font-family: Arial, sans-serif;
-// }
+    // box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
+}
