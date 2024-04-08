@@ -2,12 +2,13 @@
  -->
 
 
-<app-menulateral ></app-menulateral>
+
 
 <app-header [back]="true" headerText="Contenido"   ></app-header>
 
+<app-menulateral  class="menu-lateral"></app-menulateral>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="cuerpo_pagina">
   <ion-list style="margin-top: 7%">
     <ion-item-sliding *ngFor="let element of options; let i = index">
       <app-card-general

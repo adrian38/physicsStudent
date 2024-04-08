@@ -9,6 +9,8 @@ import { MenuController } from '@ionic/angular';
 })
 export class MenulateralComponent implements OnInit {
 
+
+
   constructor(private router: Router) { }
 
   ngOnInit() {}

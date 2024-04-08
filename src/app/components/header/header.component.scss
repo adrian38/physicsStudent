@@ -7,10 +7,11 @@
 
   .title {
     margin-top: 5%;
-    text-align: center;
+    text-align: left;
     font-family: "Helvetica-Md";
     font-weight: 500;
     font-size: 120%;
+    padding-left: 0px;
   }
   .avatar {
     align-items: end;
@@ -20,7 +21,7 @@
 
   .text-helvetica-medium {
     font-family: "Helvetica-Md" !important;
-    font-size: 21px;
+    font-size: 25px;
   }
 }
 

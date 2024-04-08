@@ -4,6 +4,7 @@
     --width: 70%; /* Asegúrate de que el menú ocupe el ancho deseado */
     --height:100%;
    
+   
   }
   
 
@@ -20,6 +21,14 @@ ion-list ion-item {
 }
 
 
-.hola1{
+.pantalla_menu{
   margin-top: 50px;
+}
+
+.submenu {
+  margin-left: 20px;
+}
+
+.menu-header {
+  z-index: 0;
 }

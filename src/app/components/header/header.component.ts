@@ -13,8 +13,9 @@ export class HeaderComponent implements OnInit {
   @Input() headerText: string = '';
   @Input() back: boolean = false;
 
-  @Output() toggleMenu = new EventEmitter();
+  /* @Output() toggleMenu = new EventEmitter();
 
+   */
   constructor(
     private _location: Location,
     private navCon: NavController,
@@ -23,7 +24,10 @@ export class HeaderComponent implements OnInit {
     private _serv: QuizService,
     private menuCtrl: MenuController
     
-  ) {}
+  ) {
+
+    
+  }
 
   ngOnInit() {
     // console.log('************* path ngonInit *************');
@@ -42,6 +46,9 @@ export class HeaderComponent implements OnInit {
   onToggleMenu() {
     console.log("click");
     this.menuCtrl.toggle();
+    
+   
+    
   }
 
  /*  menuEvent(){

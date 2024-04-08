@@ -1,19 +1,72 @@
 <ion-menu contentId="main-content"   type="overlay"  side="start" >
-  <ion-header>
+  <!-- <ion-header class="menu-header">
     <ion-toolbar>
       <ion-title></ion-title>
     </ion-toolbar>
-  </ion-header> 
+  </ion-header>  -->
   <ion-content >
-    <ion-list class="hola1">
+    <ion-list class="pantalla_menu">
       <ion-menu-toggle auto-hide = "true">
 
-        <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Contenido</ion-item>
-        <ion-item (click)="navigateToPage('/simulaciones/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Simulaciones</ion-item>
-        <ion-item (click)="navigateToPage('/tutoriales/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Tutoriales</ion-item>
-        <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Evaluación</ion-item>
+        <ion-item (click)="navigateToPage('/contenido')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Contenido</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Electrostática</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Corriente</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Magnetismo</ion-label>
+        </ion-item>
+
+        <hr style="border: 1px solid #63b5f6; height: 0.5px; margin-top: 20px; margin-bottom: 20px;">
+
+
+
+        <ion-item (click)="navigateToPage('/simulaciones/:0')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Simulaciones</ion-label>
+        </ion-item>
+
+        <ion-item (click)="navigateToPage('/simulaciones/:1')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Tutoriales</ion-label>
+        </ion-item>
+
+        <hr style="border: 1px solid #63b5f6; height: 0.5px; margin-top: 20px; margin-bottom: 20px;">
+
+        <ion-item (click)="navigateToPage('/autoexamen')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Evaluación</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-elect')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Electrostática</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-circu')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Corriente</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-magne')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Magnetismo</ion-label>
+        </ion-item>
+
+        <!-- <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Contenido</ion-item>
+        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Electrostática</ion-item>
+        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Corriente</ion-item>
+        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Magnetismo</ion-item>
+        <ion-item (click)="navigateToPage('/simulaciones/:0')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Simulaciones</ion-item>
+        <ion-item (click)="navigateToPage('/simulaciones/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Tutoriales</ion-item>
+        <ion-item (click)="navigateToPage('/autoexamen')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Evaluación</ion-item> -->
         <!-- <ion-item routerLink="/contenido"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon> Contenido</ion-item> -->
-        <ion-item (click)="navigateToPage('/progreso')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Progreaso</ion-item>
+        <!-- <ion-item (click)="navigateToPage('/progreso')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Progreaso</ion-item> -->
        <!--  <ion-item routerLink="/electrostática">Electrostática</ion-item>
  -->
       </ion-menu-toggle>
@@ -25,7 +78,7 @@
 
 <div class="ion-page" id="main-content">
   <ion-header>
-    
+
   </ion-header>
   
 </div>

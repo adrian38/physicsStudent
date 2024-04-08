@@ -1,6 +1,6 @@
 <ion-header class="header" [translucent]="true">
   <ion-row>
-    <ion-col size="3" style="padding-top: 3.5%">
+    <ion-col size="2" style="padding-top: 3.5%">
       <ion-icon
         *ngIf="back"
         name="menu"
@@ -14,7 +14,7 @@
         (click)="onToggleMenu()"
       ></ion-icon>
     </ion-col>
-    <ion-col size="6" style="padding-top: 4%"
+    <ion-col size="7" style="padding-top: 4%; padding-left: 0px,"
       ><ion-title class="title">
         {{ headerText }}
       </ion-title></ion-col
@@ -29,3 +29,4 @@
     ></ion-col>
   </ion-row>
 </ion-header>
+
