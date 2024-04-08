@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
 
         try {
             if (await this._user.login(this.user.email, password)) {
-                // this.checkUser();
+                this.checkUser();
             } else {
                 this.handleLoginError();
             }
@@ -82,25 +82,25 @@ export class LoginPage implements OnInit {
             });
     }
 
-    // checkUser() {
-    //     this.user = this._apiService.getUser();
-    //     console.log(this.user, 'user');
-    //     if (this.user.type === 'Estudiante') {
-    //         if (this.loading) {
-    //             this.loading.dismiss();
-    //         }
-    //         this.navController.navigateRoot('/home', {
-    //             animated: true,
-    //             animationDirection: 'forward',
-    //         });
-    //     } else {
-    //         if (this.loading) {
-    //             this.loading.dismiss();
-    //         }
-    //         this.btn_disabled = false;
-    //         this.showAlertProfesor();
-    //     }
-    // }
+    checkUser() {
+        //     this.user = this._apiService.getUser();
+        //     console.log(this.user, 'user');
+        //     if (this.user.type === 'Estudiante') {
+        //         if (this.loading) {
+        //             this.loading.dismiss();
+        //         }
+        this.navController.navigateRoot('/home', {
+            animated: true,
+            animationDirection: 'forward',
+        });
+        //     } else {
+        //         if (this.loading) {
+        //             this.loading.dismiss();
+        //         }
+        //         this.btn_disabled = false;
+        //         this.showAlertProfesor();
+        //     }
+    }
 
     onSubmit() {
         // console.log(this.user, 'user');
