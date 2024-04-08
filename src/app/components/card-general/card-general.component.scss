@@ -1,50 +1,37 @@
-.image-left {
-  width: 25vh;
-  max-width: 100px;
-  height: 25vh;
-  max-height: 100px;
-  padding: 5%;
-
-  img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 90%;
-    max-height: 90%;
-    border-radius: 2px;
-  }
+@font-face {
+    font-family: 'ComicNeue-Md';
+    src: url('/assets/fonts/ComicNeue-Regular.otf') format('opentype');
 }
 
-.image-strech {
-  width: 25vh;
-  max-width: 100px;
-  height: 25vh;
-  max-height: 100px;
-  padding: 5%;
-
-  img {
-    flex-shrink: 0;
-    max-width: 98%;
-    min-height: 90%;
-    max-height: 90%;
-    border-radius: 2px;
-  }
+@font-face {
+    font-family: 'ComicNeue-Bd';
+    src: url('/assets/fonts/ComicNeue_Bold.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'ComicNeue-light';
+    src: url('/assets/fonts/ComicNeue_Light.otf') format('opentype');
+}
+
+$font-comicneue-md: 'ComicNeue-Md';
+$font-comicneue-bd: 'ComicNeue-Bd';
+$font-comicneue-roman: 'ComicNeue-light';
 
 .card-title {
-  text-align: center;
-  margin-top: 15%;
-  font-weight: 500;
-  color: black;
-  font-size: x-large;
-  font-family: "Helvetica-Md";
-}
+    text-align: center;
+    margin: 3%;
+    font-weight: 400;
 
-.text-helvetica-medium {
-  font-family: "Helvetica-Md" !important;
-  font-size: 21px;
+    font-size: large;
+    font-family: 'ComicNeue-Md';
 }
 
 ion-card {
-  // border: 1px solid #63b5f6;
-  box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
+    img: {
+        max-height: 20px !important;
+    }
+    // border: 1px solid #63b5f6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    // box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
 }

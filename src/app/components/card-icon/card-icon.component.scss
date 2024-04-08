@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'ComicNeue-Md';
+    src: url('/assets/fonts/ComicNeue-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ComicNeue-Bd';
+    src: url('/assets/fonts/ComicNeue_Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ComicNeue-light';
+    src: url('/assets/fonts/ComicNeue_Light.otf') format('opentype');
+}
+
+$font-comicneue-md: 'ComicNeue-Md';
+$font-comicneue-bd: 'ComicNeue-Bd';
+$font-comicneue-roman: 'ComicNeue-light';
+
+ion-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px !important;
+    margin: 10px 0;
+
+    ion-card-header {
+        padding-bottom: 1%;
+        // ion-thumbnail {
+        //     width: 8vh;
+        //     height: 8vh;
+        //     border-radius: 20px;
+        img {
+            width: 15vh;
+            height: 15vh;
+            // transform: translateY(50%);
+            // }
+        }
+    }
+
+    ion-card-content {
+        text-align: center;
+        ion-label {
+            // font-weight: bold;
+            font-family: 'ComicNeue-Bd';
+            // text-shadow: 1px 1px 1px var(--ion-color-medium);
+            letter-spacing: 0.5px;
+        }
+    }
+}
