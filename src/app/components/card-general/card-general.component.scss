@@ -35,3 +35,7 @@ ion-card {
 
     // box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
 }
+
+ion-card:active {
+    transform: scale(0.96);
+}

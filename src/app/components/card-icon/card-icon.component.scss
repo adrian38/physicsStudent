@@ -46,3 +46,7 @@ ion-card {
         }
     }
 }
+
+ion-card:active {
+    transform: scale(0.96);
+}
