@@ -21,26 +21,29 @@ export class HomePage {
     }
 
     routeTopage(element: number) {
-        if (element === 3) {
-            this.navCtrl.navigateRoot(`/autoexamen`, {
+        setTimeout(() => {
+            let path;
+            switch (element) {
+                case 1:
+                    // Assuming `this.options[element]` is a string that needs to be converted to lower case.
+                    path = `/${this.options[element].toLocaleLowerCase()}/0`;
+                    break;
+                case 2:
+                    path = '/simulaciones/1';
+                    break;
+                case 3:
+                    path = '/autoexamen';
+                    break;
+                default:
+                    // This assumes that for all other values of `element`, `this.options[element]` is valid and intended.
+                    path = `/${this.options[element].toLocaleLowerCase()}`;
+                    break;
+            }
+
+            this.navCtrl.navigateRoot(path, {
                 animated: true,
                 animationDirection: 'forward',
             });
-        } else if (element === 1) {
-            this.navCtrl.navigateRoot(`/${this.options[element].toLocaleLowerCase()}/0`, {
-                animated: true,
-                animationDirection: 'forward',
-            });
-        } else if (element === 2) {
-            this.navCtrl.navigateRoot(`/simulaciones/1`, {
-                animated: true,
-                animationDirection: 'forward',
-            });
-        } else {
-            this.navCtrl.navigateRoot(`/${this.options[element].toLocaleLowerCase()}`, {
-                animated: true,
-                animationDirection: 'forward',
-            });
-        }
+        }, 300);
     }
 }

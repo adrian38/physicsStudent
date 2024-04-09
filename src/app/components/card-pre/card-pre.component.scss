@@ -1,18 +1,22 @@
-.simulation-pre-card {
-    width: 100%;
-    max-height: 5%;
-}
-h6 {
+.card-title {
     text-align: center;
+    margin: 3%;
+    font-weight: 400;
 
-    font-weight: 500;
-    color: black;
     font-size: large;
     font-family: 'ComicNeue-Md';
-    padding-bottom: 10%;
 }
 
 ion-card {
+    img: {
+        max-height: 20px !important;
+    }
     // border: 1px solid #63b5f6;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    // box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
+}
+
+ion-card:active {
+    transform: scale(0.96);
 }

@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController, NavController, Platform } from '@ionic/angular';
 
 @Component({
-  selector: 'app-contenido',
-  templateUrl: './contenido.page.html',
-  styleUrls: ['./contenido.page.scss'],
+    selector: 'app-contenido',
+    templateUrl: './contenido.page.html',
+    styleUrls: ['./contenido.page.scss'],
 })
 export class ContenidoPage implements OnInit {
-  options: string[] = ['Electrostática', 'Corriente', 'Magnetismo'];
+    options: string[] = ['Electrostática', 'Corriente', 'Magnetismo'];
 
   constructor(public navCtrl: NavController, 
               private platform: Platform,
@@ -36,5 +36,15 @@ export class ContenidoPage implements OnInit {
         }
       );
     }
-  }
+    routeTopage(element: number) {
+        setTimeout(() => {
+            if (element === 2) {
+            } else {
+                this.navCtrl.navigateRoot(`/${this.options[element].toLocaleLowerCase()}`, {
+                    animated: true,
+                    animationDirection: 'forward',
+                });
+            }
+        }, 300);
+    }
 }

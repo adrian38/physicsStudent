@@ -1,22 +1,3 @@
-@font-face {
-    font-family: 'ComicNeue-Md';
-    src: url('/assets/fonts/ComicNeue-Regular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'ComicNeue-Bd';
-    src: url('/assets/fonts/ComicNeue_Bold.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'ComicNeue-light';
-    src: url('/assets/fonts/ComicNeue_Light.otf') format('opentype');
-}
-
-$font-comicneue-md: 'ComicNeue-Md';
-$font-comicneue-bd: 'ComicNeue-Bd';
-$font-comicneue-roman: 'ComicNeue-light';
-
 .card-title {
     text-align: center;
     margin: 3%;
@@ -34,4 +15,8 @@ ion-card {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
     // box-shadow: rgba(99, 181, 246, 0.35) 0px 5px 15px;
+}
+
+ion-card:active {
+    transform: scale(0.96);
 }

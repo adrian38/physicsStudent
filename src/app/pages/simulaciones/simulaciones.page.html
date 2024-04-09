@@ -1,18 +1,18 @@
-<!-- <app-header [back]="true" headerText="Simulaciones"></app-header> -->
-
-<!-- <app-menulateral ></app-menulateral>
-
- -->
-
 <app-header headerText="Simulaciones"></app-header>
+<!-- <ion-content>
+    <ion-grid style="margin-top: 7%">
+        <div *ngFor="let element of options; let i = index">
+            <app-card-pre (click)="routeTopage(element.id)" [simulation_pre]="element"></app-card-pre>
+        </div>
+    </ion-grid>
+</ion-content> -->
 
-<ion-content>
-  <ion-grid style="margin-top: 7%">
-    <div *ngFor="let element of options; let i = index">
-      <app-card-pre
-        (click)="routeTopage(element.id)"
-        [simulation_pre]="element"
-      ></app-card-pre>
+<ion-content [fullscreen]="true">
+    <div style="display: flex; flex-wrap: wrap; margin-top: 7%">
+        <div *ngFor="let element of options; let i = index" style="max-width: 50%">
+            <ion-item-sliding>
+                <app-card-pre (click)="routeTopage(element.id)" [simulation_pre]="element"></app-card-pre>
+            </ion-item-sliding>
+        </div>
     </div>
-  </ion-grid>
 </ion-content>
