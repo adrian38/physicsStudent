@@ -11,10 +11,3 @@
 
 
 
-app-menulateral {
-  z-index: 10; /* Esto debería ser suficiente para superponer sobre el header */
-}
-
-app-header {
-  z-index: 20; /* Asegúrate de que el z-index del header sea menor que el del menú */
-}

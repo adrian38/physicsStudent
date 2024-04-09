@@ -1,9 +1,4 @@
-<ion-menu contentId="main-content"   type="overlay"  side="start" >
-  <!-- <ion-header class="menu-header">
-    <ion-toolbar>
-      <ion-title></ion-title>
-    </ion-toolbar>
-  </ion-header>  -->
+<!-- <ion-menu contentId="main-content"   type="overlay"  side="start" >
   <ion-content >
     <ion-list class="pantalla_menu">
       <ion-menu-toggle auto-hide = "true">
@@ -58,17 +53,7 @@
           <ion-label>Magnetismo</ion-label>
         </ion-item>
 
-        <!-- <ion-item (click)="navigateToPage('/contenido')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Contenido</ion-item>
-        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Electrostática</ion-item>
-        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Corriente</ion-item>
-        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Magnetismo</ion-item>
-        <ion-item (click)="navigateToPage('/simulaciones/:0')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Simulaciones</ion-item>
-        <ion-item (click)="navigateToPage('/simulaciones/:1')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Tutoriales</ion-item>
-        <ion-item (click)="navigateToPage('/autoexamen')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Evaluación</ion-item> -->
-        <!-- <ion-item routerLink="/contenido"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon> Contenido</ion-item> -->
-        <!-- <ion-item (click)="navigateToPage('/progreso')"> <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>Progreaso</ion-item> -->
-       <!--  <ion-item routerLink="/electrostática">Electrostática</ion-item>
- -->
+
       </ion-menu-toggle>
       
     </ion-list>
@@ -81,6 +66,41 @@
 
   </ion-header>
   
-</div>
+</div> -->
 
 
+
+
+<ion-menu contentId="principal" side = "start" menuId="primerMenu">
+  <ion-header>
+    <ion-toolbar color = "primary">
+      <ion-title>Menu Lateral</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list>
+      <ion-menu-toggle>
+        
+        <ion-item (click)="navigateToInicio()">
+          <img style="width: 50px; height: 50px; margin-right: 20px;" slot="start" src="../../../assets/icon/home.svg" alt="Icono de inicio" />
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToContenido()">
+          <img style="width: 25px; height: 25px; margin-right: 20px;" slot="start" src="../../../assets/icon/contenido.svg" alt="Icono de inicio" />
+          <ion-label>Contenido</ion-label>
+        </ion-item>
+
+        
+        <ion-item (click)="navigateToSimulaciones()">Simulaciones</ion-item>
+        <ion-item (click)="navigateToTutoriales()">Tutoriales</ion-item>
+        <ion-item (click)="navigateToExamenes()">Examenes</ion-item>
+        <ion-item (click)="navigateToQuiz()">Quiz</ion-item>
+        <ion-item (click)="navigateToProgreso()">Progreso</ion-item>
+        <ion-item (click)="navigateToChat()">Chat</ion-item>
+      
+      </ion-menu-toggle>
+
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>

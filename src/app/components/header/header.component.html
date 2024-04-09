@@ -1,4 +1,4 @@
-<ion-header class="header" [translucent]="true">
+<!-- <ion-header class="header" [translucent]="true">
   <ion-row>
     <ion-col size="2" style="padding-top: 3.5%">
       <ion-icon
@@ -28,5 +28,28 @@
       ></p-avatar
     ></ion-col>
   </ion-row>
-</ion-header>
+</ion-header> --> 
 
+<ion-header [translucent]="true" no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click) = "toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      <!-- <ion-menu-button color=" primary"
+                        menu="primerMenu"></ion-menu-button> -->
+    </ion-buttons>
+    <ion-title class="title">
+      {{ headerText }}
+    </ion-title>
+
+
+    <ion-buttons slot="end" >
+      <ion-avatar style="width: 50px; height: 50px; margin-right: 20px;">
+        <img alt="Silhouette of a person's head" src="/assets/images/user.png" />
+      </ion-avatar>
+    </ion-buttons>
+
+   
+  </ion-toolbar>
+</ion-header> 

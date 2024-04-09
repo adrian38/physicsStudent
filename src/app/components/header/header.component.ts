@@ -43,13 +43,17 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  onToggleMenu() {
+toggleMenu(){
+  this.menuCtrl.toggle();
+}
+
+ /*  onToggleMenu() {
     console.log("click");
     this.menuCtrl.toggle();
     
    
     
-  }
+  } */
 
  /*  menuEvent(){
     this.menuCtrl.toggle();

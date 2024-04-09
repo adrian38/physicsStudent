@@ -15,6 +15,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './services/backend.service';
 import { MenulateralComponent } from './components/menulateral/menulateral.component';
+import { ComponentsModule } from './components/components.module';
 
 export function playerFactory(): any {
   return import('lottie-web');
@@ -30,6 +31,7 @@ export function playerFactory(): any {
     LottieModule.forRoot({ player: playerFactory }),
     NgxChartsModule,
     HttpClientModule,
+    ComponentsModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
