@@ -20,7 +20,7 @@ import { HeaderInterceptor } from './interceptor/header-interceptor';
 
 import { UserService } from './services/user.service';
 import { ApiService } from './services/backend.service';
-import { MenulateralComponent } from './components/menulateral/menulateral.component';
+// import { MenulateralComponent } from './components/menulateral/menulateral.component';
 import { ComponentsModule } from './components/components.module';
 
 export function playerFactory(): any {
@@ -29,8 +29,17 @@ export function playerFactory(): any {
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, LottieModule.forRoot({ player: playerFactory }), NgxChartsModule, HttpClientModule],
-    providers: [{ provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true }, { provide: LocationStrategy, useClass: HashLocationStrategy }, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, QuizService, ApiService, UserService],
+    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule, LottieModule.forRoot({ player: playerFactory }), NgxChartsModule, HttpClientModule, ComponentsModule],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true },
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        QuizService,
+        ApiService,
+        UserService,
+        // ComponentsModule,
+        // MenulateralComponent,
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

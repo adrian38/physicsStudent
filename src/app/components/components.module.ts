@@ -11,11 +11,9 @@ import { RouterModule } from '@angular/router';
 import { CardIconComponent } from './card-icon/card-icon.component';
 
 @NgModule({
-  declarations: [HeaderComponent, CardGeneralComponent, CardPreComponent,MenulateralComponent],
-  exports: [HeaderComponent, CardGeneralComponent, CardPreComponent,MenulateralComponent],
-  imports: [CommonModule, IonicModule, AvatarModule,RouterModule],
-  declarations: [HeaderComponent, CardGeneralComponent, CardPreComponent,CardIconComponent],
-  exports: [HeaderComponent, CardGeneralComponent, CardPreComponent,CardIconComponent],
-  imports: [CommonModule, IonicModule, AvatarModule],
+    declarations: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent],
+    exports: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent],
+    imports: [CommonModule, IonicModule, AvatarModule],
+    // imports: [CommonModule, IonicModule, AvatarModule,RouterModule],
 })
 export class ComponentsModule {}

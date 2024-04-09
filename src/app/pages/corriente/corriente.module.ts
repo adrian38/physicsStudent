@@ -10,13 +10,7 @@ import { CorrientePage } from './corriente.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    CorrientePageRoutingModule,
-    ComponentsModule,
-  ],
-  declarations: [CorrientePage],
+    imports: [CommonModule, FormsModule, IonicModule, CorrientePageRoutingModule, ComponentsModule],
+    declarations: [CorrientePage],
 })
 export class CorrientePageModule {}
