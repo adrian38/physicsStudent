@@ -1,0 +1,106 @@
+<!-- <ion-menu contentId="main-content"   type="overlay"  side="start" >
+  <ion-content >
+    <ion-list class="pantalla_menu">
+      <ion-menu-toggle auto-hide = "true">
+
+        <ion-item (click)="navigateToPage('/contenido')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Contenido</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/electrostática')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Electrostática</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Corriente</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/corriente')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Magnetismo</ion-label>
+        </ion-item>
+
+        <hr style="border: 1px solid #63b5f6; height: 0.5px; margin-top: 20px; margin-bottom: 20px;">
+
+
+
+        <ion-item (click)="navigateToPage('/simulaciones/:0')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Simulaciones</ion-label>
+        </ion-item>
+
+        <ion-item (click)="navigateToPage('/simulaciones/:1')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Tutoriales</ion-label>
+        </ion-item>
+
+        <hr style="border: 1px solid #63b5f6; height: 0.5px; margin-top: 20px; margin-bottom: 20px;">
+
+        <ion-item (click)="navigateToPage('/autoexamen')"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Evaluación</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-elect')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Electrostática</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-circu')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Corriente</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToPage('/exam-magne')" class="submenu"> 
+          <ion-icon name="logo-ionic" size="large" color="primary"></ion-icon>
+          <ion-label>Magnetismo</ion-label>
+        </ion-item>
+
+
+      </ion-menu-toggle>
+      
+    </ion-list>
+    
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+
+  </ion-header>
+  
+</div> -->
+
+
+
+
+<ion-menu contentId="principal" side = "start" menuId="primerMenu">
+  <ion-header>
+    <ion-toolbar color = "primary">
+      <ion-title>Menu Lateral</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list>
+      <ion-menu-toggle>
+        
+        <ion-item (click)="navigateToInicio()">
+          <img style="width: 50px; height: 50px; margin-right: 20px;" slot="start" src="../../../assets/icon/home.svg" alt="Icono de inicio" />
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item (click)="navigateToContenido()">
+          <img style="width: 25px; height: 25px; margin-right: 20px;" slot="start" src="../../../assets/icon/contenido.svg" alt="Icono de inicio" />
+          <ion-label>Contenido</ion-label>
+        </ion-item>
+
+        
+        <ion-item (click)="navigateToSimulaciones()">Simulaciones</ion-item>
+        <ion-item (click)="navigateToTutoriales()">Tutoriales</ion-item>
+        <ion-item (click)="navigateToExamenes()">Examenes</ion-item>
+        <ion-item (click)="navigateToQuiz()">Quiz</ion-item>
+        <ion-item (click)="navigateToProgreso()">Progreso</ion-item>
+        <ion-item (click)="navigateToChat()">Chat</ion-item>
+      
+      </ion-menu-toggle>
+
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>

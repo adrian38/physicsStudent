@@ -1,0 +1,34 @@
+
+  
+  ion-menu {
+    --width: 70%; /* Asegúrate de que el menú ocupe el ancho deseado */
+    --height:100%;
+   
+   
+  }
+  
+
+  /* Ajustar el margen del ícono */
+ion-icon {
+  margin-right: 16px; /* Ajusta este valor a tus necesidades */
+}
+
+/* Ocultar la línea divisoria para todos los ion-item dentro de ion-list */
+ion-list ion-item {
+  --border-style: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+.pantalla_menu{
+  margin-top: 50px;
+}
+
+.submenu {
+  margin-left: 20px;
+}
+
+.menu-header {
+  z-index: 0;
+}

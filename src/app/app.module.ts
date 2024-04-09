@@ -20,6 +20,8 @@ import { HeaderInterceptor } from './interceptor/header-interceptor';
 
 import { UserService } from './services/user.service';
 import { ApiService } from './services/backend.service';
+import { MenulateralComponent } from './components/menulateral/menulateral.component';
+import { ComponentsModule } from './components/components.module';
 
 export function playerFactory(): any {
     return import('lottie-web');
