@@ -1,0 +1,27 @@
+<!-- <ion-row >
+  <ion-col size="12">
+    <h4 class="titulo" *ngIf="title">{{ title }}</h4>
+  </ion-col>
+</ion-row>
+<ion-row >
+  <ion-col size="12">
+    
+    <p class="ion-text-start texto">
+      {{ text }}
+    </p>
+  </ion-col>
+</ion-row>
+ -->
+
+ <ion-row *ngIf="title">
+  <ion-col size="12">
+    <h4 class="titulo">{{ title }}</h4>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="12">
+    <p class="ion-text-start texto">
+      {{ text }}
+    </p>
+  </ion-col>
+</ion-row>
