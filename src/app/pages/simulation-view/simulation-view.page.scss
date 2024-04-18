@@ -16,8 +16,17 @@ h2 {
     font-family: 'ComicNeue-light';
 }
 
-h4 {
-    text-align: center;
 
-    font-weight: 500;
-}
+
+.subtemas {
+    color: var(--ion-color-orange);
+    font: normal 20px 'ComicNeue-Bd', sans-serif;
+    margin-left: 2.5%;
+  }
+
+  .lista{
+    font: normal 18px 'ComicNeue_Light', sans-serif;
+    margin-left: 5.3%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
