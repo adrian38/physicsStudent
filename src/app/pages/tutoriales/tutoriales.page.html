@@ -1,7 +1,7 @@
 <app-header  headerText="Tutorial"></app-header>
 
-<ion-content>
-  <ion-grid style="margin-top: 7%">
+
+<!--   <ion-grid style="margin-top: 7%">
     <ion-row style="margin-left: 2.5%" >
       <h4 >{{options[id-1].name}}</h4>
     </ion-row>
@@ -20,6 +20,18 @@
         {{line}}
       </h6>
     </ion-row>
+
+    <p>Debug: {{ options[id-1].tutorial_information | json }}</p>
+ -->
+
+ <ion-content>
+  <ion-grid style="margin-top: 7%">
+    <app-text-tutorial title="{{options[id-1].name}}" 
+                    text_principal="{{options[id-1].tutorial_title}}"
+                    text_objetivo = "{{options[id-1].tutorial_objective}}"
+                    [text_materiales] = "options[id-1].tutorial_information">
+        </app-text-tutorial>
   
   <app-card-pre [simulation_pre]="options[id-1]"></app-card-pre>
+</ion-grid>
 </ion-content>

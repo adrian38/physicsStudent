@@ -21,6 +21,7 @@ export class TutorialesPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log(this.options)
     this.id = parseInt(this.route.snapshot.paramMap.get('id'));
 
     this.platform.backButton.subscribeWithPriority(10, () => {

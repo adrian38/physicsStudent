@@ -9,10 +9,12 @@ import { CardPreComponent } from './card-pre/card-pre.component';
 import { MenulateralComponent } from './menulateral/menulateral.component';
 import { RouterModule } from '@angular/router';
 import { CardIconComponent } from './card-icon/card-icon.component';
+import { TextDisplayComponent } from './text-display/text-display.component';
+import { TextTutorialComponent } from './text-tutorial/text-tutorial.component';
 
 @NgModule({
-    declarations: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent],
-    exports: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent],
+    declarations: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent,TextDisplayComponent,TextTutorialComponent],
+    exports: [HeaderComponent, CardGeneralComponent, CardPreComponent, MenulateralComponent, CardIconComponent,TextDisplayComponent,TextTutorialComponent],
     imports: [CommonModule, IonicModule, AvatarModule],
     // imports: [CommonModule, IonicModule, AvatarModule,RouterModule],
 })

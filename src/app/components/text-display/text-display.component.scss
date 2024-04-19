@@ -1,0 +1,34 @@
+/* .titulo {
+    color: var(--ion-color-orange);
+    font: normal 22px 'ComicNeue-Bd', sans-serif;
+    // text-align: left;
+}
+.texto {
+    //color: var(--ion-color-orange);
+    font: normal 18px 'ComicNeue_Light', sans-serif;
+    // text-align: left;
+}
+
+
+ */
+
+
+ ion-row, ion-col {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .titulo {
+    color: var(--ion-color-orange);
+    font: normal 22px 'ComicNeue-Bd', sans-serif;
+  }
+  
+  .texto {
+    font: normal 18px 'ComicNeue_Light', sans-serif;
+
+  }
+
+  p{
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }

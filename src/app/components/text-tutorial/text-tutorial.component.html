@@ -1,0 +1,48 @@
+
+
+<ion-row >
+  <ion-col size="12">
+    <h4 class="titulo">{{ title }}</h4>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="12">
+    <p class="ion-text-start texto">
+      {{ text_principal }}
+    </p>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+
+    <h4 class="subtemas ion-text-start">Objetivo</h4>
+
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <p class="ion-text-start texto">
+      {{ text_objetivo }}
+    </p>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+
+    <h4 class="subtemas ion-text-start">Materiales</h4>
+
+  </ion-col>
+</ion-row>
+
+<ion-row *ngFor="let material of text_materiales">
+  <ion-col size="12" >
+    <p class="lista">{{ material }}</p>
+
+  </ion-col>
+</ion-row>
+
+
+
