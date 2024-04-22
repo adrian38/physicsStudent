@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuController, NavController } from '@ionic/angular';
+import { MenuController, NavController ,} from '@ionic/angular';
+import { filter } from 'rxjs/operators';
+import { NavigationEnd } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-menulateral',
@@ -9,11 +13,26 @@ import { MenuController, NavController } from '@ionic/angular';
 })
 export class MenulateralComponent implements OnInit {
 
+  ruta = ""
 
+  constructor(private router: Router,private navCtrl: NavController) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      console.log('URL actual:', event.url);
+      this.ruta= event.url
+      // Aquí puedes hacer cualquier cosa que necesites con la URL actual
+    });
+  }
 
-  constructor(private router: Router,private navCtrl: NavController) { }
+     
+  
 
-  ngOnInit() {}
+   
+
+  ngOnInit() {
+  
+  }
 
 /*   navigateToPage(route: string) {
     this.router.navigateByUrl(route);

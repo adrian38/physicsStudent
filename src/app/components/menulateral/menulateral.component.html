@@ -72,35 +72,73 @@
 
 
 <ion-menu contentId="principal" side = "start" menuId="primerMenu">
-  <ion-header>
+  <!-- <ion-header>
     <ion-toolbar color = "primary">
       <ion-title>Menu Lateral</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
   <ion-content >
-    <ion-list>
-      <ion-menu-toggle>
+    <div class="menu-header-bg"></div>
+    <div class="header-content">
+      <img alt="Silhouette of a person's head" src="/assets/images/user.png" />
+      <ion-label>
         
-        <ion-item (click)="navigateToInicio()">
-          <img style="width: 30px; height: 30px; margin-right: 20px;" slot="start" src="../../../assets/icon/home.svg" alt="Icono de inicio" />
-          <ion-label>Inicio</ion-label>
-        </ion-item>
-        <ion-item (click)="navigateToContenido()">
-          <img style="width: 30px; height: 30px; margin-right: 20px;" slot="start" src="../../../assets/icon/contenido.svg" alt="Icono de inicio" />
-          <ion-label>Contenido</ion-label>
-        </ion-item>
+        <h4 class="subtemas ion-text-start">Dr. Hamad Fakih</h4>
+        <p>Fisico</p>
+      </ion-label>
+    </div>
+    
+    <ion-list >
+        <ion-menu-toggle>
+          
+          <ion-item (click)="navigateToInicio()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/icon/home.svg" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/home',opcion_desactiva: ruta !== '/home'}">Inicio</ion-label>
+          </ion-item>
+          <ion-item (click)="navigateToContenido()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/icon/contenido.svg" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/contenido',opcion_desactiva: ruta !== '/contenido'}">Contenido</ion-label>
+          </ion-item>
+          <ion-item (click)="navigateToSimulaciones()()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Simulaciones.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/simulaciones/0',opcion_desactiva: ruta !== '/simulaciones/0'}">Simulaciones</ion-label>
+          </ion-item>
 
+          <ion-item (click)="navigateToTutoriales()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Tutoriales.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/simulaciones/1',opcion_desactiva: ruta !== '/simulaciones/1'}">Tutoriales</ion-label>
+          </ion-item>
+          
+          <ion-item (click)="navigateToExamenes()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Exámenes.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/autoexamen',opcion_desactiva: ruta !== '/autoexamen'}">Examenes</ion-label>
+          </ion-item>
+  
+          <ion-item (click)="navigateToQuiz()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Quiz.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/quiz',opcion_desactiva: ruta !== '/quiz'}">Quiz</ion-label>
+          </ion-item>
+
+          <ion-item (click)="navigateToProgreso()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Progreso.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/mal',opcion_desactiva: ruta !== '/mal'}">Progreso</ion-label>
+          </ion-item>
+
+          <ion-item (click)="navigateToChat()">
+            <img style="width: 30px; height: 30px; margin-right: 20px;margin-left: 20px;" slot="start" src="../../../assets/images/Chat.png" alt="Icono de inicio" />
+            <ion-label [ngClass] = "{opcion_activa: ruta=== '/mal',opcion_desactiva: ruta !== '/mal'}">Chat</ion-label>
+          </ion-item>
+  
+          
+          
+          
+      
         
-        <ion-item (click)="navigateToSimulaciones()">Simulaciones</ion-item>
-        <ion-item (click)="navigateToTutoriales()">Tutoriales</ion-item>
-        <ion-item (click)="navigateToExamenes()">Examenes</ion-item>
-        <ion-item (click)="navigateToQuiz()">Quiz</ion-item>
-        <ion-item (click)="navigateToProgreso()">Progreso</ion-item>
-        <ion-item (click)="navigateToChat()">Chat</ion-item>
-      
-      </ion-menu-toggle>
-
-      
-    </ion-list>
+        </ion-menu-toggle>
+  
+        
+      </ion-list>
+    
+    
   </ion-content>
 </ion-menu>
