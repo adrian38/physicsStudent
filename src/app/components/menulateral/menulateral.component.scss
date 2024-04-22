@@ -1,11 +1,23 @@
 
   
-  ion-menu {
-    --width: 70%; /* Asegúrate de que el menú ocupe el ancho deseado */
+ion-menu {
+    --width: 75%; /* Asegúrate de que el menú ocupe el ancho deseado */
     --height:100%;
    
    
   }
+
+.menu-header-bg{
+  width: 300px;
+  height: 30%;
+  background: rgb(99, 179, 245);
+  box-shadow: 0px 1px 10px rgb(98, 140, 255, 0.5);
+  transform: rotate(-15deg);
+  border-radius: 10px 10px 10px 50px;
+  margin-left: -18px;
+  margin-top: -50px;
+  margin-bottom: 60px;
+}
   
 
   /* Ajustar el margen del ícono */
@@ -31,4 +43,63 @@ ion-list ion-item {
 
 .menu-header {
   z-index: 0;
+}
+
+
+.header-content{
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 7px solid rgb(99, 179, 245);
+  }
+
+  .subtemas {
+    color: white;
+    font: normal 16px 'ComicNeue-Bd', sans-serif;
+    margin-left: 14px;
+    
+
+  }
+
+  p{
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.4px;
+    font: normal 18px 'ComicNeue_Light', sans-serif;
+    margin-left: 14px;
+
+  }
+
+ 
+}
+
+.opcion_activa{
+  //font: normal 16px 'ComicNeue-Bd', sans-serif;
+  margin-left: 14px;
+  
+  margin: 3%;
+  font-weight: 400;
+
+  font-size: large;
+  font-family: 'ComicNeue-Md';
+  color: rgb(99, 179, 245);
+}
+
+.opcion_desactiva{
+  //font: normal 16px 'ComicNeue-Bd', sans-serif;
+  margin-left: 14px;
+  
+  margin: 3%;
+  font-weight: 400;
+
+  font-size: large;
+  font-family: 'ComicNeue-Md';
+  color: rgba(50, 50, 93);
 }
