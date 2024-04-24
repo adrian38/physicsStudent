@@ -3,221 +3,207 @@ import { AlertController, MenuController, NavController } from '@ionic/angular';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
+import { Platform } from '@ionic/angular';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() headerText: string = '';
-  @Input() back: boolean = false;
+    @Input() headerText: string = '';
+    @Input() back: boolean = false;
 
-  /* @Output() toggleMenu = new EventEmitter();
+    /* @Output() toggleMenu = new EventEmitter();
 
    */
-  constructor(
-    private _location: Location,
-    private navCon: NavController,
-    private route: ActivatedRoute,
-    public alertController: AlertController,
-    private _serv: QuizService,
-    private menuCtrl: MenuController
-    
-  ) {
+    constructor(
+        private _location: Location,
+        private navCon: NavController,
+        private route: ActivatedRoute,
+        public alertController: AlertController,
+        private _serv: QuizService,
+        private menuCtrl: MenuController,
+        private platform: Platform
+    ) {}
 
-    
-  }
+    async ngOnInit() {
+        if (this.platform.is('capacitor')) {
+            try {
+                // await StatusBar.setStyle({ style: Style.Light });
+                await StatusBar.setBackgroundColor({ color: '63b3f5' });
+            } catch (err) {
+                console.log('Error setting status bar style and color', err);
+            }
+        }
+        // console.log('************* path ngonInit *************');
+        // console.log(this._location.path());
 
-  ngOnInit() {
-    // console.log('************* path ngonInit *************');
-    // console.log(this._location.path());
-
-    if (this._location.path() === '/simulaciones/1') {
-      this.headerText = 'Tutoriales';
+        if (this._location.path() === '/simulaciones/1') {
+            this.headerText = 'Tutoriales';
+        }
+        // else {
+        //   console.log('************* delse iferente path *************');
+        //   console.log();
+        // }
     }
-    // else {
-    //   console.log('************* delse iferente path *************');
-    //   console.log();
-    // }
-  }
 
+    toggleMenu() {
+        this.menuCtrl.toggle();
+    }
 
-toggleMenu(){
-  this.menuCtrl.toggle();
-}
-
- /*  onToggleMenu() {
+    /*  onToggleMenu() {
     console.log("click");
     this.menuCtrl.toggle();
-    
-   
-    
+
+
+
   } */
 
- /*  menuEvent(){
+    /*  menuEvent(){
     this.menuCtrl.toggle();
-    
+
     console.log("click")
   } */
 
-  backEvent() {
-    console.log('************* path *************');
-    console.log(this._location.path());
+    backEvent() {
+        console.log('************* path *************');
+        console.log(this._location.path());
 
-    if (this._location.isCurrentPathEqualTo('/home')) {
-      this.navCon.navigateRoot('/login', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/exam-elect')) {
-      this.navCon.navigateRoot('/autoexamen', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    }
-      else if (this._location.isCurrentPathEqualTo('/register')) {
-        this.navCon.navigateRoot('/login', {
-          animated: true,
-          animationDirection: 'back',
-        });
-    } else if (this._location.isCurrentPathEqualTo('/exam-circu')) {
-      this.navCon.navigateRoot('/autoexamen', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/exam-magne')) {
-      this.navCon.navigateRoot('/autoexamen', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz')) {
-      this.navCon.navigateRoot('/simulaciones/0', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/electrost%C3%A1tica')) {
-      this.navCon.navigateRoot('/contenido', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-elect1')) {
-      this.alertController
-        .create({
-          header: 'Alerta',
-          message: 'Desea salir del Quiz?',
-          backdropDismiss: false,
-          buttons: [
-            {
-              text: 'Cancelar',
-              role: 'cancel',
-              handler: () => {},
-            },
-            {
-              text: 'Salir',
-              handler: () => {
-                this._serv.deleteFields();
-                this.navCon.navigateRoot('/simulaciones/0', {
-                  animated: true,
-                  animationDirection: 'back',
+        if (this._location.isCurrentPathEqualTo('/home')) {
+            this.navCon.navigateRoot('/login', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/exam-elect')) {
+            this.navCon.navigateRoot('/autoexamen', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/register')) {
+            this.navCon.navigateRoot('/login', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/exam-circu')) {
+            this.navCon.navigateRoot('/autoexamen', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/exam-magne')) {
+            this.navCon.navigateRoot('/autoexamen', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz')) {
+            this.navCon.navigateRoot('/simulaciones/0', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/electrost%C3%A1tica')) {
+            this.navCon.navigateRoot('/contenido', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz-elect1')) {
+            this.alertController
+                .create({
+                    header: 'Alerta',
+                    message: 'Desea salir del Quiz?',
+                    backdropDismiss: false,
+                    buttons: [
+                        {
+                            text: 'Cancelar',
+                            role: 'cancel',
+                            handler: () => {},
+                        },
+                        {
+                            text: 'Salir',
+                            handler: () => {
+                                this._serv.deleteFields();
+                                this.navCon.navigateRoot('/simulaciones/0', {
+                                    animated: true,
+                                    animationDirection: 'back',
+                                });
+                            },
+                        },
+                    ],
+                })
+                .then((alert) => {
+                    alert.present();
                 });
-              },
-            },
-          ],
-        })
-        .then((alert) => {
-          alert.present();
-        });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-elect12')) {
-      this.navCon.navigateRoot('/quiz-elect1', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-elect13')) {
-      this.navCon.navigateRoot('/quiz-elect12', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-elect14')) {
-      this.navCon.navigateRoot('/quiz-elect13', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-elect15')) {
-      this.navCon.navigateRoot('/quiz-elect14', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/quiz-result')) {
-      this._serv.deleteFields();
-      this.navCon.navigateRoot('/simulaciones/0', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/magnetismo')) {
-      this.navCon.navigateRoot('/contenido', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/corriente')) {
-      this.navCon.navigateRoot('/contenido', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (
-      this._location.isCurrentPathEqualTo(
-        `/simulaciones/${this.route.snapshot.paramMap.get('id')}`
-      )
-    ) {
-      this.navCon.navigateRoot('/home', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (
-      this._location.isCurrentPathEqualTo(
-        `/tutoriales/${this.route.snapshot.paramMap.get('id')}`
-      )
-    ) {
-      this.navCon.navigateRoot('/simulaciones/1', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (
-      this._location.isCurrentPathEqualTo(
-        `/simulation-view/${this.route.snapshot.paramMap.get('id')}`
-      )
-    ) {
-      this.navCon.navigateRoot('/simulaciones/0', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/contenido')) {
-      this.navCon.navigateRoot('/home', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/progreso')) {
-      this.navCon.navigateRoot('/home', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (this._location.isCurrentPathEqualTo('/autoexamen')) {
-      this.navCon.navigateRoot('/home', {
-        animated: true,
-        animationDirection: 'back',
-      });
-    } else if (
-      this._location.isCurrentPathEqualTo(
-        `/simulation-detail/${this.route.snapshot.paramMap.get('id')}`
-      )
-    ) {
-      this.navCon.navigateRoot(
-        `/simulation-view/${this.route.snapshot.paramMap.get('id')}`,
-        {
-          animated: true,
-          animationDirection: 'back',
+        } else if (this._location.isCurrentPathEqualTo('/quiz-elect12')) {
+            this.navCon.navigateRoot('/quiz-elect1', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz-elect13')) {
+            this.navCon.navigateRoot('/quiz-elect12', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz-elect14')) {
+            this.navCon.navigateRoot('/quiz-elect13', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz-elect15')) {
+            this.navCon.navigateRoot('/quiz-elect14', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/quiz-result')) {
+            this._serv.deleteFields();
+            this.navCon.navigateRoot('/simulaciones/0', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/magnetismo')) {
+            this.navCon.navigateRoot('/contenido', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/corriente')) {
+            this.navCon.navigateRoot('/contenido', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo(`/simulaciones/${this.route.snapshot.paramMap.get('id')}`)) {
+            this.navCon.navigateRoot('/home', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo(`/tutoriales/${this.route.snapshot.paramMap.get('id')}`)) {
+            this.navCon.navigateRoot('/simulaciones/1', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo(`/simulation-view/${this.route.snapshot.paramMap.get('id')}`)) {
+            this.navCon.navigateRoot('/simulaciones/0', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/contenido')) {
+            this.navCon.navigateRoot('/home', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/progreso')) {
+            this.navCon.navigateRoot('/home', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo('/autoexamen')) {
+            this.navCon.navigateRoot('/home', {
+                animated: true,
+                animationDirection: 'back',
+            });
+        } else if (this._location.isCurrentPathEqualTo(`/simulation-detail/${this.route.snapshot.paramMap.get('id')}`)) {
+            this.navCon.navigateRoot(`/simulation-view/${this.route.snapshot.paramMap.get('id')}`, {
+                animated: true,
+                animationDirection: 'back',
+            });
         }
-      );
     }
-  }
 }
