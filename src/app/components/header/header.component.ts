@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { AlertController, MenuController, NavController } from '@ionic/angular';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router ,NavigationEnd} from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
 import { Platform } from '@ionic/angular';
 import { StatusBar, Style } from '@capacitor/status-bar';
@@ -15,6 +15,9 @@ export class HeaderComponent implements OnInit {
     @Input() headerText: string = '';
     @Input() back: boolean = false;
 
+    showIcon: boolean = false;
+    showIconMenu: boolean = false;
+
     /* @Output() toggleMenu = new EventEmitter();
 
    */
@@ -25,8 +28,9 @@ export class HeaderComponent implements OnInit {
         public alertController: AlertController,
         private _serv: QuizService,
         private menuCtrl: MenuController,
-        private platform: Platform
-    ) {}
+        private platform: Platform,
+        private router: Router
+    ) { }
 
     async ngOnInit() {
         if (this.platform.is('capacitor')) {
@@ -47,27 +51,51 @@ export class HeaderComponent implements OnInit {
         //   console.log('************* delse iferente path *************');
         //   console.log();
         // }
+
+        this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                console.log(this.router.url)
+                if(this.router.url === '/editregister'){
+                    this.showIcon = false;
+                 
+                    
+                }
+                else{
+                    this.showIcon = true;
+
+                }
+
+                if(this.router.url === '/register'){
+                    this.showIconMenu = false;
+                    this.showIcon = false;
+
+                    
+                }
+                else{
+                    this.showIconMenu = true;
+                    
+
+
+                }
+              //this.showIcon = this.router.url === '/editregister'; // Aquí defines la condición
+            }
+          });
+       
     }
 
     toggleMenu() {
         this.menuCtrl.toggle();
     }
 
-    /*  onToggleMenu() {
-    console.log("click");
-    this.menuCtrl.toggle();
+
+    goEditRegister() {
+
+        this.router.navigate(['editregister'])
+
+    }
 
 
-
-  } */
-
-    /*  menuEvent(){
-    this.menuCtrl.toggle();
-
-    console.log("click")
-  } */
-
-    backEvent() {
+    /* backEvent() {
         console.log('************* path *************');
         console.log(this._location.path());
 
@@ -116,7 +144,7 @@ export class HeaderComponent implements OnInit {
                         {
                             text: 'Cancelar',
                             role: 'cancel',
-                            handler: () => {},
+                            handler: () => { },
                         },
                         {
                             text: 'Salir',
@@ -205,5 +233,5 @@ export class HeaderComponent implements OnInit {
                 animationDirection: 'back',
             });
         }
-    }
+    } */
 }

@@ -128,4 +128,10 @@ export class RegisterPage implements OnInit {
     return this.loading.present();
   }
 
+  cancelar_registro(){
+    this.navController.navigateRoot('/login', {
+      animated: true,
+      animationDirection: 'forward',
+    });
+  }
 }

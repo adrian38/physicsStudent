@@ -1,0 +1,70 @@
+<app-header headerText="Editar"></app-header>
+
+
+<ion-content>
+    <div class="menu-header-bg"></div>
+    <div class="header-content">
+        <img alt="Silhouette of a person's head" src="/assets/images/user.png" />
+    </div>
+
+    <div class="login">
+        <div class="login_buttons">
+            <div style="display: flex; justify-content: flex-start">
+
+                <div class="one_button">
+                    <form #invalid_form="ngForm">
+                        <ion-input class="custom_input" type="realname" name="realname" 
+                            minlength="3" placeholder="Nombre completo" required> </ion-input>
+
+
+
+
+                        <ion-input class="custom_input" type="phone" name="phone" 
+                            minlength="3" placeholder="Teléfono" required>
+                        </ion-input>
+
+
+                       <ion-input class="custom_input" 
+                                    type="date" 
+                                    name="date" 
+                                    placeholder="Fecha de nacimiento" 
+                                    required>
+                        </ion-input>
+                        
+                        <!-- <ion-item>
+                            <ion-icon name="calendar" slot="start" style="margin-left: 10px;"></ion-icon>
+                            <ion-input type="date" name="date" placeholder="Fecha de nacimiento" required class="custom_input"></ion-input>
+                          </ion-item> -->
+                          
+
+
+
+                        <ion-input class="custom_input" type="email" name="user" 
+                            placeholder="CORREO" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                            required>
+                        </ion-input>
+
+
+
+
+                        <ion-input class="custom_input" type="password" name="password" 
+                            minlength="3" placeholder="CONTRASEÑA" required>
+                        </ion-input>
+
+                        <ion-input class="custom_input" type="password" name="password" 
+                            minlength="3" placeholder="Repetir contraseña" required>
+                        </ion-input>
+
+                        <ion-button type="submit" class="btnaceptar" >
+                            <span>Registrar Datos</span>
+                        </ion-button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</ion-content>
